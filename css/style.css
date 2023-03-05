@@ -1,0 +1,834 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+
+body {
+    text-align: center;
+    font-family: sans-serif;
+}
+
+.head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 63px;
+    background: none;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    
+}
+.head.abajo{
+    background: #171717e4;
+    width: 100%;
+    z-index: 100;
+    opacity: 0.95;
+}
+
+.navbar {
+    display: flex;
+    margin-right: 10px;
+}
+
+
+/*========LOGO=================*/
+.logo {
+    display: flex;
+    margin-left: 30px;
+    
+}
+
+.logo a { 
+    font-size: 30px;
+    color: #006503;
+    text-decoration: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    letter-spacing: 2px;
+    font-style: oblique;
+}
+
+.logo a:hover { 
+    font-size: 30px;
+    color: #1f1d1d00;
+    -webkit-text-stroke: 1px #006503;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    cursor: pointer;
+}
+/*============================*/
+
+/*========BARRA DE NAVEGACION=================*/
+.navbar a {
+    display: block;
+    padding: 20px 20px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.navbar .toggle_btn{
+    display: block;
+    padding: 20px 20px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 25px;
+    display: none;
+}
+
+.navbar .toggle_btn:hover{
+    color: #008705;
+    cursor: pointer;
+}
+
+.navbar a:hover {
+    
+    color:#008705;
+}
+/*============================*/
+
+/*========BARRA DE NAVEGACION ACHICADO=================*/
+
+.dropdown_menu{
+    display: none;
+    position: absolute;
+    right: 2rem;
+    top: 60px;
+    height: 0;
+    width: 300px;
+    background: rgba(44, 44, 44, 0.921);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropdown_menu.open{
+    height: 240px;
+    outline: 2px solid #008705;
+}
+
+.dropdown_menu a{
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-decoration: none;
+}
+
+.dropdown_menu a:hover{
+    color:#008705;
+}
+
+
+/*===================================*/
+
+
+/*========PAGINA PRINCIPAÑ=================*/
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+/*========IMAGEN FONDO=================*/
+.header {
+    height: 100vh !important;
+    background: url(/img/gif-n.gif) no-repeat center;
+    background-size: cover;
+}
+
+/*========TITULO=================*/
+.title {
+    margin-bottom: 25px;
+    font-size: 70px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #fff;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.title-proy {
+    margin-bottom: 25px;
+    margin-top: 60px;
+    font-size: 70px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #fff;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/*========TITULO QUE SE MUEVE=================*/
+.title-java{
+    margin-bottom: 40px;
+    font-size: 40px;
+    font-weight: 600;
+    color:#008705;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;    
+}
+
+/*========PARRAFO=================*/
+.profile-info p{
+    text-align: center;
+}
+
+/*ESCRITURA JAVASCRIPT*/
+/*======================================*/
+.title .escritura{
+    font-weight: bold;
+    color: #008705;
+    font-style: normal;
+}
+/*======================================*/
+
+/*ICONOS*/
+/*======================================*/
+.social-icons{
+    width: 250px;
+    height: auto;
+    display: flex; /*ahora cada icono ocupa lo necesario, ya no hay margenes*/
+    align-items: center;
+    justify-content: space-between;
+    justify-self: end; /*lleva a todos los iconos a la derecha o sea al ultimo*/
+    /* margin-right: 50px; */
+  }
+
+  .social-icons a{
+    color:#fff;
+    font-size: 40px;
+  }
+  
+  .social-icons a:hover{
+    color:#008705;
+  }
+
+/*======================================*/
+
+
+.second-title{
+    margin-bottom: 20px;
+    font-size: 30px;
+    font-weight: 600;
+    color: #fff;
+}
+
+p {
+    margin-bottom: 40px;
+    font-size: 18px;
+    color: #fff;
+    padding: 0 100px;
+}
+
+h5{
+    margin-bottom: 40px;
+    font-size: 25px;
+    color: #fff;
+    padding: 0 100px;    
+}
+
+/*** ESTILOS BOTÓN GROW ELLIPSE ***/
+.btn {
+    text-decoration: none;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    background: #fff; /* color de fondo */
+    background: #008705; /* color de fuente */
+    padding: 10px 40px;
+    border-radius: 20px; /* redondear bordes */
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    display: inline-block;
+    color: #fff;
+}
+.btn:hover {
+    color: #008705;/* color de fuente hover */
+}
+.btn::after {
+    content: "";
+    background-color: #1f1d1d;
+
+    outline: 0px solid #0405045e;
+    position: absolute;
+    z-index: -1;
+    padding: 16px 20px;
+    display: block;
+    border-radius: 50%;
+    left: -50%;
+    right: -50%;
+    top: -150%;
+    bottom: -150%;
+    transform: scale(0, 0);
+    transition: all 0.4s ease;
+}
+.btn:hover::after {
+    transition: all 0.6s ease-out;
+    transform: scale(1, 1);
+}
+
+.btn-home {
+    display: flex;
+}
+
+.btn-home a {
+    margin: 0 10px;
+}
+
+/*========CONTENIDO DE LAS SECCIONES=================*/
+.content {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+}
+/*========FORMULARIOS=================*/
+.form{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: center;
+}
+
+/*========IMAGEN PERFIL=================*/
+
+.profile img{
+    height: 30vh;
+    width: auto;
+    border-radius: 20px;
+}
+
+/*========PERFIL=================*/
+.sau {
+    padding: 30px;
+    background: #1f1d1d
+}
+
+.box-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+/*========HABILIDADES CAJAS=================*/
+
+.box-container .box {
+    height: 11rem;
+    width: 11rem;
+    background: #101010;
+    text-align: center;
+    border-radius: 1rem;
+    box-shadow: 0 .3rem 5rem rgba(0, 0 , 0, .5);
+    margin: 2rem;   
+}                
+
+/*HOVER CON LOS BOX DE LAS HABILIDADES*/
+
+
+.box:hover{
+    height: 11rem;
+    width: 11rem;
+    background: #101010;
+    text-align: center;
+    border-radius: 1rem;
+    box-shadow: 0 .3rem 5rem rgba(0, 0 , 0, .5);
+    margin: 2rem; 
+}
+
+/*========COLOR QUE RESALTAN=================*/
+
+.csharpbox:hover{
+    box-shadow: 0 0 30px 0.5px #870080;
+}
+.sqlbox:hover{
+    box-shadow: 0 0 30px 0.5px #c10000;
+}
+.mongobox:hover{
+    box-shadow: 0 0 30px 0.5px #00871d;
+}
+.htmlbox:hover{
+    box-shadow: 0 0 30px 0.5px #ff8400;
+}
+.cssbox:hover{
+    box-shadow: 0 0 30px 0.5px #090087;
+}
+.javascriptbox:hover{
+    box-shadow: 0 0 30px 0.5px #f6ff00;
+}
+.javabox:hover{
+    box-shadow: 0 0 30px 0.5px #438bff;
+}
+.angularbox:hover{
+    box-shadow: 0 0 30px 0.5px #890000;
+}
+.box-container .box img:hover{
+    margin-top: 20px;
+    height: 60%;
+    width: auto;
+} 
+
+/*===========================================================*/
+
+/*========IMAGEN DE LAS CAJAS DE LAS HABILIDADES=================*/
+
+.box-container .box img{
+    margin-top: 25px;
+    height: 55%;
+    width: auto;
+} 
+
+/*========NOMBRES EN LAS CAJAS DE LAS HABILIDADES=================*/
+
+.box-container .box p{
+    padding: 0%;
+    text-align: center;
+} 
+
+/*========SOBRE MI=================*/
+
+.about {
+    background: #171717;
+}
+
+/*========FONDO QUE SE MUEVE EN LOS PROYECTOS=================*/
+
+
+.price {
+    background: url(/img/costos.jpg) no-repeat center;
+    background-attachment: fixed;
+    background-size: cover;
+    text-align: center;
+}
+
+.container-slider{
+    width: 90%;
+    max-width: 900px;
+    margin: auto;
+    overflow: hidden;
+    box-shadow: 0 0 0 10px #fff,
+                0 15px 50px;
+    position: relative;
+}
+
+.slider__btn{
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    background: rgba(255, 255 , 255, 0.7);
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    font-weight: bold;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.git-proy{
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    top: 80%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.7);
+    font-size: 34px;
+    border-radius: 100%;
+    cursor: pointer;
+    color: #fff;
+}
+
+.git-proy:hover{
+    color: #008705;
+    font-size: 34px;
+}
+
+.slider__btn:hover{
+    background: #008705;
+}
+
+.slider__btn--left{
+    left: 10px;
+}
+
+.slider__btn--right{
+    right: 10px;
+}
+
+.slider__section{
+    width: 100%;
+}
+
+.slider{
+    display: flex;
+    width: 400%; /*Este hay que agradar por 100 cuando agregas una imagen*/
+    height: 400px;
+    margin-left: -100%;
+}
+
+.slider__img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/*========SECCION CONTACTO=================*/
+
+.contact {
+    padding-top: 20px;
+    background: #171717;
+    padding-bottom: 0;
+}
+
+.contact-information{
+    margin-right: 1000px;
+}
+
+/*contacto*/
+.contact{
+    margin: 0;
+    padding: 0;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+.ContactForm{
+    position:relative;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    pad: 40px;
+    width: 90%;
+    height: 90%;
+    box-shadow: 1px, 9px,20px,-5px rgba(0,0,0,0.59);
+    border-radius: 30px;
+}
+
+section .ContactForm .form{
+    position: relative;
+    display: block;
+    justify-content: left;
+    align-items: center;
+    flex-direction:column;
+    width: 55%;
+    margin-left: 20%;
+}
+
+section .ContactForm .form form{
+    width: 100%;
+}
+
+section .ContactForm .form .texto h2{
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+section .ContactForm .form form .inputBox{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px ;
+}
+
+section .ContactForm .form form .inputBox label{
+    text-align: left;
+    font-weight: 700;
+    color: #fff;
+}
+
+/*========BOTON DE MENSAJE Y MAIL=================*/
+
+
+section .ContactForm .form form .inputBox input[type="text"],
+section .ContactForm .form form .inputBox input[type="email"],
+section .ContactForm .form form .inputBox textarea{
+    border: #fff;
+    background: #6cc46f00;
+    outline: 2px solid #ffffff;
+    padding: 10px;
+    border-radius: 15px;
+    color: #fff;
+    resize: none;
+}
+
+/*========COLOR DE ALREDEDOR AL MOMENTO DE TOCAR=================*/
+
+section .ContactForm .form form .inputBox input[type="text"]:focus,
+section .ContactForm .form form .inputBox input[type="email"]:focus,
+section .ContactForm .form form .inputBox textarea:focus{
+    outline: 2px solid #008705;    
+}
+
+/*========BOTON ENVIAR=================*/
+
+section .ContactForm .form form input[type="submit"]{
+    background-color: #008705;
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    padding: 10px;
+    border-radius: 15px;
+    color: #fff;
+    letter-spacing: 1px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 1px, 9px,20px,-5px rgba(0,0,0,0.59);
+    transition: 0.3;
+    z-index: 1;
+}
+
+/*========BOTON ENVIAR AL MOMENTO DE APRETAR=================*/
+
+section .ContactForm .form form input[type="submit"]:hover{
+    color: #008705;/* color de fuente hover */
+    background: #1f1d1d; /* color de fondo hover */
+
+    transform: scale(1, 1);
+    transition: all 0.4s ease;
+    z-index: 1;
+}
+
+/*========INFORMACION DE CONTACTO=================*/
+
+.info{
+    width: 100%;
+}
+
+.infoContact{
+    padding: 1% 0;
+    margin-left: 10%;
+    font-size: 20px;
+    text-align: left;
+    color: #fff;
+}
+
+#trucazo{
+    opacity: 0;
+}
+
+/*========ICONOS DE CONTACTO=================*/
+
+.infoContact i{
+    color: #008705;
+    font-size: 25px;
+}
+
+/*boton de ir arriba*/
+#button-up{
+    width: 50px;
+    height: 50px;
+    background: #008705;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    border-radius: 50%;
+    font-size: 20px;
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    cursor: pointer;
+    border: 4px solid transparent;
+    transition: all 300ms ease;
+    transform: scale(0);
+}
+
+#button-up:hover{
+    width: 55px;
+    height: 55px;
+    transform: scale(1.1);
+    border-color: rgba(0, 0, 0, 0.286);
+    background-color: #1f1d1d;
+    color: #008705;
+}
+/*==================*/
+
+@media (max-width: 1035px) {
+
+    .title {
+        margin-bottom: 0;
+        margin-top: 10vh;
+    }
+    .sau {
+        height: 100vh;
+    }
+    .box-container .box {
+        height: 9rem;
+        width: 9rem;
+    }
+    
+    .box:hover{
+        height: 9rem;
+        width: 9rem;
+    }
+
+    .navbar a{
+        display: none;
+    }
+
+    .navbar .toggle_btn {
+        display: block;
+    }
+
+    .dropdown_menu{
+        display: block;
+    }
+    .infoContact{
+        margin-left: 10px;
+        display: flex;
+        text-align: left;
+    }
+   
+    .container-slider{
+        height: 50vh;
+    }
+    
+}
+
+@media (max-width: 850px) {
+
+    .infoContact{
+        margin-left: 10px;
+    }
+   
+    
+}
+@media (max-width: 815px) {
+
+    .infoContact{
+        margin-left: 1px;
+    }
+   
+    
+}
+
+@media (max-width: 768px) {
+
+
+    .title {
+        margin-bottom: 5vh;
+        font-size: 40px;
+        margin-top: 5vh;
+    }
+
+    .sau {
+        height: 100vh;
+    }
+
+    .box-container .box {
+        height: 7rem;
+        width: 7rem;
+        margin-bottom: 10px;
+    }
+    
+    .box:hover{
+        height: 7rem;
+        width: 7rem;
+    }
+    .price{
+        height: 100vh;
+    }
+    .about{
+        height: 100%;
+    }
+    .ContactForm{
+        height: 100%;
+        flex-direction: column;
+    }
+    .form{
+        height: 57vh;
+        display: flex;
+    }
+    .info{
+        display: flex;
+        justify-content: center;
+    }
+    .contact{
+        height: 100%;
+    }
+    .infoContact{
+        padding: 0 0;
+        margin-bottom: 20px;
+        font-size: 10px;
+    }
+
+    .infoContact p{
+        margin-bottom: 0;
+    }
+    .container-slider{
+        height: 45vh;
+        
+    }
+}
+
+@media (max-width: 768px) {
+    .dropdown_menu{
+        left: 2rem;
+        width: unset;
+    }
+}
+
+@media (max-width: 430px) {
+    .sau{
+        height: 100%;
+    }
+}
+
+
+
+
+
+
+
+/*===========================================================================*/
+/*
+ .box-container .box i {
+    height: 3rem;
+    width: 3rem;
+    line-height: 3rem;
+    text-align: center;
+    border-radius: 50%;
+    color: #fff;
+    background: #008705;
+    font-size: 50px;
+    margin: 1rem 0;
+}
+.box i{
+    padding: 50px;
+} */
+
+/*AGRANDAR BOX CON HOVER */
+
+/* .box-container .box i:hover {
+    height: 3.5rem;
+    width: 3.5rem;
+    line-height: 3.5rem;
+    text-align: center;
+    border-radius: 50%;
+    color: #fff;
+    background: #008705;
+    font-size: 2.5rem;
+    margin: 1rem 0;
+}
+
+
+.box-container .box:hover {
+    height: 11.5rem;
+    width: 17.5rem;
+    background: #101010;
+    text-align: center;
+    border-radius: 1rem;
+    box-shadow: 0 .3rem 5rem rgba(0, 0 , 0, .5);
+    margin: 2rem;   
+} */
+/*===========================================================================*/
