@@ -659,6 +659,10 @@ section .ContactForm .form form input[type="submit"]:hover{
         margin-bottom: 0;
         margin-top: 10vh;
     }
+    .title-proy{
+        margin-bottom: 0;
+        margin-top: 10vh;
+    }
     .sau {
         height: 100vh;
     }
@@ -693,6 +697,10 @@ section .ContactForm .form form input[type="submit"]:hover{
         height: 50vh;
     }
     
+    html, body {
+        max-width: 100% !important;
+        overflow-x: hidden !important;
+    }
 }
 
 @media (max-width: 850px) {
@@ -700,7 +708,10 @@ section .ContactForm .form form input[type="submit"]:hover{
     .infoContact{
         margin-left: 10px;
     }
-   
+    html, body {
+        max-width: 100% !important;
+        overflow-x: hidden !important;
+    }
     
 }
 @media (max-width: 815px) {
@@ -709,13 +720,29 @@ section .ContactForm .form form input[type="submit"]:hover{
         margin-left: 1px;
     }
    
-    
+    html, body {
+        max-width: 100% !important;
+        overflow-x: hidden !important;
+    }
+
+    .btn{
+        margin-bottom: 100px;
+    }
+
+    .box-container {
+        height: 100vh;
+    }
 }
 
 @media (max-width: 768px) {
 
 
     .title {
+        margin-bottom: 5vh;
+        font-size: 40px;
+        margin-top: 5vh;
+    }
+    .title-proy{
         margin-bottom: 5vh;
         font-size: 40px;
         margin-top: 5vh;
@@ -767,15 +794,12 @@ section .ContactForm .form form input[type="submit"]:hover{
     }
     .container-slider{
         height: 45vh;
-        
     }
-}
+    html, body {
+        max-width: 100% !important;
+        overflow-x: hidden !important;
+    }
 
-@media (max-width: 768px) {
-    .dropdown_menu{
-        left: 2rem;
-        width: unset;
-    }
 }
 
 @media (max-width: 430px) {
