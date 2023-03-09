@@ -145,6 +145,6 @@ btnLeft.addEventListener('click', function(){
 
 /*para que sea automatico*/
 
-setInterval(function() {
-    moverDerecha();
-}, 5000);
+// setInterval(function() {
+//     moverDerecha();
+// }, 5000);

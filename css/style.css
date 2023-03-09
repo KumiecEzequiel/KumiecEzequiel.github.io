@@ -334,20 +334,17 @@ h5{
 /*HOVER CON LOS BOX DE LAS HABILIDADES*/
 
 
-.box:hover{
-    height: 11rem;
-    width: 11rem;
-    background: #101010;
-    text-align: center;
-    border-radius: 1rem;
-    box-shadow: 0 .3rem 5rem rgba(0, 0 , 0, .5);
-    margin: 2rem; 
-}
 
 /*========COLOR QUE RESALTAN=================*/
 
 .csharpbox:hover{
     box-shadow: 0 0 30px 0.5px #870080;
+}
+.box:hover .img-box{
+    margin-top: 10px;
+    height: 65%;
+    width: auto;
+    transition: all 300ms ;
 }
 .sqlbox:hover{
     box-shadow: 0 0 30px 0.5px #c10000;
@@ -370,11 +367,14 @@ h5{
 .angularbox:hover{
     box-shadow: 0 0 30px 0.5px #890000;
 }
-.box-container .box img:hover{
+.mysqlbox:hover{
+    box-shadow: 0 0 30px 0.5px #1f38f2;
+}
+/* .box-container .box img:hover{
     margin-top: 20px;
     height: 60%;
     width: auto;
-} 
+}  */
 
 /*===========================================================*/
 
@@ -384,6 +384,10 @@ h5{
     margin-top: 25px;
     height: 55%;
     width: auto;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; 
 } 
 
 /*========NOMBRES EN LAS CAJAS DE LAS HABILIDADES=================*/
@@ -391,6 +395,10 @@ h5{
 .box-container .box p{
     padding: 0%;
     text-align: center;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; 
 } 
 
 /*========SOBRE MI=================*/
@@ -443,6 +451,10 @@ h5{
     border-radius: 100%;
     cursor: pointer;
     color: #fff;
+    z-index: 1;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: all 200ms;
 }
 
 .git-proy:hover{
@@ -464,6 +476,23 @@ h5{
 
 .slider__section{
     width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.container-slider p{
+    position: absolute;
+    font-size: 20px;
+    top: 50%;
+    left: 20%;
+    z-index: 1;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: all 200ms;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 .slider{
@@ -471,6 +500,48 @@ h5{
     width: 400%; /*Este hay que agradar por 100 cuando agregas una imagen*/
     height: 400px;
     margin-left: -100%;
+    position: relative;
+}
+
+.container-slider .background-hover{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    border-radius: 100%;
+    transition: all 500ms;
+}
+
+.container-slider .primera{
+    background: linear-gradient(to left,#ca5fff54 ,#000000 );
+}
+
+.container-slider .segunda{
+    background: linear-gradient(to left,#01679e4d,#000000 );
+}
+
+.container-slider .tercera{
+    background: linear-gradient(to left,#92ff9647,#000000 );
+}
+
+.container-slider .cuarta{
+    background: linear-gradient(to left,#98000047,#000000 );
+}
+
+.container-slider:hover .background-hover {
+    width: 1200px;
+    height: 1200px;
+    top: -400px;
+    left: -50px;
+}
+
+.container-slider:hover .git-proy {
+    transform: translateY(-30px);
+    opacity: 1;
+}
+
+.container-slider:hover p {
+    transform: translateY(0);
+    opacity: 1;
 }
 
 .slider__img{
@@ -604,12 +675,15 @@ section .ContactForm .form form input[type="submit"]:hover{
     width: 100%;
 }
 
-.infoContact{
+.infoContact p{
     padding: 1% 0;
-    margin-left: 10%;
     font-size: 20px;
     text-align: left;
     color: #fff;
+    width: 100vh;
+}
+.textBox{
+
 }
 
 #trucazo{
@@ -651,6 +725,85 @@ section .ContactForm .form form input[type="submit"]:hover{
     background-color: #1f1d1d;
     color: #008705;
 }
+
+
+
+
+/*carrusel infinito en los proyectos*/
+
+@-webkit-keyframes scroll {
+    0% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+    }
+    100% {
+      -webkit-transform: translateX(calc(-100px * 3));
+              transform: translateX(calc(-100px * 3));
+    }
+  }
+  
+  @keyframes scroll {
+    0% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+    }
+    100% {
+      -webkit-transform: translateX(calc(-100px * 3));
+              transform: translateX(calc(-100px * 3));
+    }
+  }
+
+  .sliderHab {
+    /*box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .125);*/
+    height: 50px;
+    margin: auto;
+    margin-top: 30px;
+    overflow: hidden;
+    position: relative;
+    width: 600px;
+    top: -90%;
+    z-index: 1;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: all 200ms;
+  }
+  .sliderHab::before, .sliderHab::after {
+    content: "";
+    height: 100px;
+    position: absolute;
+    width: 200px;
+    z-index: 2;
+  }
+
+  
+.container-slider:hover .sliderHab {
+    transform: translateY(-30px);
+    opacity: 1;
+}
+  .sliderHab::after {
+    right: 0;
+    top: 0;
+    -webkit-transform: rotateZ(180deg);
+            transform: rotateZ(180deg);
+  }
+  .sliderHab::before {
+    left: 0;
+    top: 0;
+  }
+  .sliderHab .slide-track {
+    -webkit-animation: scroll 6s linear ;
+            animation: scroll 6s linear infinite;
+    display: flex;
+    width: calc(100px * 9);
+  }
+  .sliderHab .slide {
+    height: 50px;
+    width: 100px;
+  }
+  
+  .sliderHab .slide img {
+    height: 100%;
+  }
 /*==================*/
 
 @media (max-width: 1035px) {
@@ -701,6 +854,18 @@ section .ContactForm .form form input[type="submit"]:hover{
         max-width: 100% !important;
         overflow-x: hidden !important;
     }
+
+    .container-slider:hover .git-proy {
+        transform: translateY(-60px);
+        opacity: 1;
+    }
+    
+    .container-slider:hover p {
+        transform: translateY(-50px);
+        opacity: 1;
+    }
+
+
 }
 
 @media (max-width: 850px) {
@@ -716,8 +881,31 @@ section .ContactForm .form form input[type="submit"]:hover{
 }
 @media (max-width: 815px) {
 
+    .ContactForm{
+        height: 100%;
+        flex-direction: column;
+    }
+    .form{
+        height: 57vh;
+        display: flex;
+    }
+    .info{
+        display: flex;
+        justify-content: center;
+    }
+    .contact{
+        height: 100%;
+    }
     .infoContact{
-        margin-left: 1px;
+        padding: 0 0;
+        margin-bottom: 5px;
+        font-size: 10px;
+    }
+
+    .infoContact p{
+        height: 10px;
+        width: 100%;
+        margin-top: 20px;
     }
    
     html, body {
@@ -731,6 +919,16 @@ section .ContactForm .form form input[type="submit"]:hover{
 
     .box-container {
         height: 100vh;
+    }
+    .title {
+        margin-bottom: 5vh;
+        font-size: 40px;
+        margin-top: 5vh;
+    }
+    .title-proy{
+        margin-bottom: 5vh;
+        font-size: 40px;
+        margin-top: 5vh;
     }
 }
 
@@ -768,30 +966,7 @@ section .ContactForm .form form input[type="submit"]:hover{
     .about{
         height: 100%;
     }
-    .ContactForm{
-        height: 100%;
-        flex-direction: column;
-    }
-    .form{
-        height: 57vh;
-        display: flex;
-    }
-    .info{
-        display: flex;
-        justify-content: center;
-    }
-    .contact{
-        height: 100%;
-    }
-    .infoContact{
-        padding: 0 0;
-        margin-bottom: 20px;
-        font-size: 10px;
-    }
 
-    .infoContact p{
-        margin-bottom: 0;
-    }
     .container-slider{
         height: 45vh;
     }
@@ -800,13 +975,108 @@ section .ContactForm .form form input[type="submit"]:hover{
         overflow-x: hidden !important;
     }
 
+    .container-slider:hover .git-proy {
+        transform: translateY(-90px);
+        opacity: 1;
+    }
+    
+    .container-slider:hover p {
+        transform: translateY(-80px);
+        opacity: 1;
+        padding: 0;
+        margin-bottom: 0;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 604px) {
+    .box-container .box{
+        margin: 0 0 10px 20px;
+    }
+    .sau{
+        height: 100vh;
+    }
+}
+
+@media (max-width: 588px) {
+    .sau{
+        height: 100vh;
+    }
+}
+
+@media (max-width: 523px) {
+    .sau{
+        height: 100vh;
+    }
+    .infoContact p{
+        font-size: 15px;
+
+    }
+}
+
+@media (max-width: 456px) {
+    .sau{
+        height: 115vh;
+    }
 }
 
 @media (max-width: 430px) {
+    .box-container .box{
+        margin: 0 0 10px 20px;
+    }
     .sau{
-        height: 100%;
+        height: 110vh;
+    }
+    .container-slider:hover .git-proy {
+        left: 50%;
+    }
+    
+    .container-slider:hover p {
+        font-size: 15px;
+        left: 15%;
+    }
+
+    .sliderHab .slide img{
+        height: 80%;
+    }
+
+}
+
+@media (max-width: 324px) {
+    .box-container .box{
+        height: 5rem;
+        width: 5rem;
+    }
+    
+    .box-container .box img{
+        margin-top: 15px;
+        height: 45%;
+    }
+
+    .box-container .box p{
+        font-size: 10px;
     }
 }
+
+@media (max-width: 260px) {
+    .box-container .box{
+        height: 4rem;
+        width: 4rem;
+    }
+    .box-container .box img{
+        margin-top: 20px;
+        height: 45%;
+    }
+    .container-slider:hover p {
+
+        left: 0;
+    }
+
+}
+
+
+
 
 
 
@@ -856,3 +1126,4 @@ section .ContactForm .form form input[type="submit"]:hover{
     margin: 2rem;   
 } */
 /*===========================================================================*/
+
