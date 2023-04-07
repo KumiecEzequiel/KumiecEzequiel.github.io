@@ -1049,7 +1049,7 @@ section .ContactForm .form form input[type="submit"]:hover{
     }
 }
 
-@media (max-width: 430px) {
+@media (max-width: 430px) { /*tamaño celu a30s*/
     .box-container .box{
         margin: 0 0 10px 20px;
     }
@@ -1061,8 +1061,7 @@ section .ContactForm .form form input[type="submit"]:hover{
     }
     
     .container-slider:hover p {
-        font-size: 15px;
-        left: 15%;
+        font-size: 14px;
     }
 
     .sliderHab .slide img{
