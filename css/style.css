@@ -1015,6 +1015,7 @@ section .ContactForm .form form input[type="submit"]:hover{
         margin-bottom: 0;
         display: flex;
         justify-content: center;
+        top: 45%;
     }
 }
 
@@ -1070,6 +1071,17 @@ section .ContactForm .form form input[type="submit"]:hover{
     }
 
 }
+
+@media (max-width: 411px) {
+    
+    .container-slider:hover p {
+        font-size: 10px;
+        left: 0%;
+        top: 70%;
+    }
+
+}
+
 
 @media (max-width: 324px) {
     .box-container .box{
